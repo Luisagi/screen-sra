@@ -1,0 +1,19 @@
+name: screen-sra
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.11.15
+  - snakemake=9.17.3
+  - pyyaml=6.0.3
+  - sra-tools=3.2.1
+  - fastp=1.3.0
+  - bwa=0.7.19
+  - samtools=1.23.1
+  - bedtools=2.31.1
+  - pip=26.0.1
+  - pigz
+  - pip:
+      - gffutils==0.13
+      - openpyxl==3.1.5

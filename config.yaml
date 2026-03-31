@@ -1,0 +1,36 @@
+# screen-sra configuration
+# ========================
+
+# Threads for mapping step (bwa mem)
+# The workflow will automatically use additional threads for download (4) and QC (4)
+# You can run with --cores N to allocate more parallel jobs
+threads: 8
+
+# File containing SRA run IDs (one per line)
+sra_ids_file: test_data/SRR_Acc_List.txt
+
+# Keep auxiliary/temporary files? (true/false)
+# Set to false to save disk space
+keep_aux: true
+
+# Keep mapping files (BAM/CRAM)? (true/false)
+# Set to false to save disk space
+keep_mapping: true
+
+# Include features with zero coverage in output? (true/false)
+# Set to false for cleaner output
+include_zero_rows: false
+
+# Genomes to screen (add more as needed)
+genomes:                                              # Genomes to screen
+  - genome_id: Zymobacter_sp_IVIA_12111.31_C1
+    fasta: test_data/Zymobacter_sp_IVIA_12111.31_C1.fna
+    gff3: test_data/Zymobacter_sp_IVIA_12111.31_C1.gff3
+  
+  - genome_id: Zymobacter_sp_IVIA_5232.4_C2
+    fasta: test_data/Zymobacter_sp_IVIA_5232.4_C2.fna
+    gff3: test_data/Zymobacter_sp_IVIA_5232.4_C2.gff3
+
+
+
+
